@@ -1,10 +1,17 @@
-import { Github, Dribbble, Linkedin, Instagram, MapPin, CheckCircle } from 'lucide-react'
+import { MapPin, CheckCircle } from 'lucide-react'
 import { portfolio } from '../data/portfolio'
 import heroImage from '../assets/portfolio_guy.png'
+import resumePdf from '../assets/ruchit_sheth_resume.pdf'
+import { GitHubIcon, LinkedInIcon, DiscordIcon, InstagramIcon } from './SocialIcons'
 
 export default function HeroSection() {
   const handleDownloadCV = () => {
-    window.open(portfolio.cvUrl, '_blank')
+    const link = document.createElement('a')
+    link.href = resumePdf
+    link.download = 'Ruchit_Sheth_Resume.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -20,9 +27,8 @@ export default function HeroSection() {
             Hi, I'm {portfolio.name}
           </h1>
 
-          <div className="text-2xl md:text-3xl font-bold text-black mb-6 flex items-center gap-1">
+          <div className="text-2xl md:text-3xl font-bold text-black mb-6">
             <span>{portfolio.role}</span>
-            <span className="blink-cursor">|</span>
           </div>
 
           <p className="text-base text-gray-600 mb-6 leading-relaxed max-w-sm">
@@ -30,13 +36,13 @@ export default function HeroSection() {
           </p>
 
           <div className="flex gap-3 mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full text-sm">
-              <MapPin size={16} />
-              <span>Based in {portfolio.location.split(',')[0]}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-400 rounded-full text-sm text-gray-900">
+              <MapPin size={16} className="text-gray-900 shrink-0" />
+              <span className="font-medium">Based in {portfolio.location.split(',')[0]}</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full text-sm">
-              <CheckCircle size={16} />
-              <span>{portfolio.status}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-400 rounded-full text-sm text-gray-900">
+              <CheckCircle size={16} className="text-gray-900 shrink-0" />
+              <span className="font-medium">{portfolio.status}</span>
             </div>
           </div>
 
@@ -48,7 +54,7 @@ export default function HeroSection() {
               onClick={handleDownloadCV}
               className="px-6 py-2.5 bg-white text-black border-2 border-black rounded-lg font-medium hover:scale-105 transition-transform duration-300 hover:shadow-lg flex items-center gap-2"
             >
-              <span>⬇</span> Download CV
+              <span>⬇</span> Download Résumé
             </button>
           </div>
 
@@ -57,27 +63,27 @@ export default function HeroSection() {
           <div className="flex items-center gap-4">
             <span className="text-sm font-medium text-gray-700">Follow me:</span>
             <div className="flex gap-4">
-              <a href={portfolio.github} className="text-gray-500 hover:text-black hover:scale-125 transition-all duration-300">
-                <Github size={22} />
+              <a href={portfolio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-600 hover:text-black hover:scale-125 transition-all duration-300">
+                <GitHubIcon size={22} />
               </a>
-              <a href={portfolio.discord} className="text-gray-500 hover:text-black hover:scale-125 transition-all duration-300">
-                <Dribbble size={22} />
+              <a href={portfolio.discord} target="_blank" rel="noopener noreferrer" aria-label="Discord" className="text-gray-600 hover:text-black hover:scale-125 transition-all duration-300">
+                <DiscordIcon size={22} />
               </a>
-              <a href={portfolio.linkedin} className="text-gray-500 hover:text-black hover:scale-125 transition-all duration-300">
-                <Linkedin size={22} />
+              <a href={portfolio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-600 hover:text-black hover:scale-125 transition-all duration-300">
+                <LinkedInIcon size={22} />
               </a>
-              <a href={portfolio.instagram} className="text-gray-500 hover:text-black hover:scale-125 transition-all duration-300">
-                <Instagram size={22} />
+              <a href={portfolio.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-black hover:scale-125 transition-all duration-300">
+                <InstagramIcon size={22} />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="flex-1 flex justify-end">
+        <div className="flex-1 flex justify-end items-center">
           <img
             src={heroImage}
             alt="Portfolio"
-            className="float-animation max-h-96 object-contain"
+            className="float-animation w-full max-w-xl max-h-[32rem] object-contain"
           />
         </div>
       </div>

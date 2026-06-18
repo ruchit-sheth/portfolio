@@ -9,7 +9,7 @@ export const portfolio = {
   linkedin: "https://www.linkedin.com/in/ruchit-sheth-/",
   discord: "https://discordapp.com/users/762359666675154984",
   instagram: "https://instagram.com/ruchitsheth1331",
-  cvUrl: "./assets/ruchit_sheth_résumé.pdf",
+  cvUrl: "/ruchit_sheth_resume.pdf",
   stats: [
     { value: "2+", label: "Years Experience" },
     { value: "10+", label: "Projects" },
