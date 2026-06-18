@@ -19,7 +19,7 @@ export default function HeroSection() {
       <div className="max-w-7xl w-full flex gap-12 items-center">
         <div className="flex-1 max-w-md">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100 border border-gray-300 rounded-full mb-6">
-            <div className="w-2 h-2 bg-black rounded-full"></div>
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
             <span className="text-xs font-medium text-gray-700">Available for freelance work</span>
           </div>
 
