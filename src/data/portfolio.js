@@ -52,10 +52,10 @@ export const portfolio = {
     }
   ],
   skills: {
-    "Languages": ["Python", "C++", "SQL"],
-    "Backend / Infra": ["React", "FastAPI", "Redis", "Celery", "Docker"],
-    "Quant": ["Quantitative Finance", "Portfolio Optimization", "Backtesting"],
-    "ML / Data": ["LLM", "RAG", "StatsBomb API", "D3.js", "Pandas", "NumPy"]
+    "Programming Languages": ["Python", "SQL", "Java", "C++"],
+    "Data Analytics & Visualization": ["Pandas", "NumPy", "Excel", "Power BI", "Tableau", "Matplotlib"],
+    "Databases": ["MongoDB", "MySQL"],
+    "Methodologies & Tools": ["Excel", "Tableau", "Agile", "Scrum", "Git", "Postman"]
   },
   about: "I'm a recent B.Tech IT graduate from DJSCE, Mumbai with a deep interest in quantitative finance and systems engineering. I've built portfolio optimization tools, autonomous code repair frameworks, and AI-powered football analytics platforms. I'm currently targeting quant research and SWE roles in Mumbai."
 }
