@@ -19,18 +19,36 @@ export const portfolio = {
   projects: [
     {
       name: "TacticGen AI",
-      description: "World Cup 2026 tactical intelligence platform powered by LLM and StatsBomb data.",
-      stack: ["Python", "LLM", "StatsBomb", "D3.js"]
+      url: "https://example.com/tacticgen-ai",
+      summary: "Football tactical intelligence platform built around match-event data, clustering, and grounded LLM recommendations.",
+      descriptionPoints: [
+        "Built an end-to-end pipeline ingesting raw match events from StatsBomb and API-Football.",
+        "Computed 10+ tactical metrics across 10 matches per opponent to surface weak zones and style patterns.",
+        "Engineered a grounded LLM layer with structured opponent context to generate data-cited recommendations."
+      ],
+      stack: ["Python", "FastAPI", "D3.js", "Pandas", "StatsBomb", "API-Football", "Anthropic API"],
     },
     {
-      name: "FinFlow",
-      description: "Portfolio optimization research using ARMA and Prophet forecasting models.",
-      stack: ["Python", "Quant Finance", "ARMA", "Prophet"]
+      name: "Quantitative Asset Management & Risk Analysis System",
+      url: "https://example.com/finflow",
+      summary: "Quantitative investment platform for market feeds, asset risk tracking, and portfolio optimization.",
+      descriptionPoints: [
+        "Integrated real-time market feeds via yfinance to track asset performance and volatility for 50+ users.",
+        "Implemented ARMA and Prophet models to forecast asset prices and support investment strategy formulation.",
+        "Generated automated performance reports to visualize profit and loss scenarios for stakeholders."
+      ],
+      stack: ["Python", "Pandas", "NumPy", "REST APIs", "yfinance", "ARMA", "Prophet"],
     },
     {
       name: "Self-Healing Code",
-      description: "Autonomous LLM-powered bug repair framework with automated GitHub PR integration.",
-      stack: ["Python", "LLM", "GitHub API"]
+      url: "https://example.com/self-healing-code",
+      summary: "Autonomous code repair framework that detects failures, proposes fixes, and opens follow-up pull requests.",
+      descriptionPoints: [
+        "Detects bug patterns and generates repair candidates using an LLM-assisted workflow.",
+        "Automates GitHub PR creation so fixes can be reviewed and merged with minimal manual handling.",
+        "Designed as a self-healing loop that keeps iterating until the target fix is validated."
+      ],
+      stack: ["Python", "LLM", "GitHub API", "Automation"],
     }
   ],
   skills: {

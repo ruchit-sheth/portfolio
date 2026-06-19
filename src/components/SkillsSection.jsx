@@ -2,11 +2,11 @@ import { portfolio } from '../data/portfolio'
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="min-h-screen w-full flex items-center justify-center px-6 py-20 bg-white">
+    <section id="skills" className="min-h-[72vh] w-full flex items-center justify-center px-6 py-12 bg-white">
       <div className="max-w-7xl w-full">
-        <h2 className="text-4xl font-bold text-black mb-12">Skills</h2>
+        <h2 className="text-4xl font-bold text-black mb-8">Skills</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {Object.entries(portfolio.skills).map(([category, skills]) => (
             <div key={category}>
               <h3 className="text-lg font-semibold text-black mb-4">{category}</h3>
